@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block jumbotron %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello, world!</h1>
+
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a
+                jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+                unique.</p>
+
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="col-md-3">
+        <h2>Heading</h2>
+
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+            Donec sed odio dui. </p>
+
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+    </div>
+    <div class="col-md-3">
+        <h2>Heading</h2>
+
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+            Donec sed odio dui. </p>
+
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+    </div>
+    <div class="col-md-3">
+        <h2>Heading</h2>
+
+        <p> justo sit amet risus.</p>
+
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+    </div>
+    <div class="col-md-3">
+    <h1>Subscribe</h1>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="DGJZVUGVQQJLL">
+            <table class="paypal-table">
+                <tr>
+                    <td><input type="hidden" name="on0" value="Length"></td>
+                </tr>
+                <tr>
+                    <td><select name="os0" class="form-control">
+                        <option value="1 month">1 month $5,00 USD</option>
+                        <option value="3 moths">3 moths $14,50 USD</option>
+                        <option value="6 months">6 months $25,00 USD</option>
+                    </select></td>
+                </tr>
+            </table>
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" class="btn btn-success" value="Get subscribe now!">
+        </form>
+
+
+
+    </div>
+
+{% endblock %}
