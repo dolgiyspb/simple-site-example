@@ -1,1 +1,1 @@
-web: gunicorn -b 0.0.0.0:8000 mvp_landing.wsgi --log-file -
+web: gunicorn mvp_landing.wsgi --log-file -
