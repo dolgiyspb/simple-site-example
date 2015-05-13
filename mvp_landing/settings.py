@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.core.exceptions import ObjectDoesNotExist
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -117,3 +118,9 @@ if DEBUG:
         os.path.join(BASE_DIR, 'static', 'bootstrap'),
         os.path.join(BASE_DIR, 'static', 'signups'),
     )
+
+from django.contrib.auth.models import User
+try:
+    User.objects.get(username='test')
+except ObjectDoesNotExist:
+    User.objects.create_superuser(username='test', password='test', email='test@test.ru')
